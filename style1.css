@@ -112,6 +112,10 @@ nav a:first-child {
 
 /* -------- MOBILE MODE -------- */
 @media (max-width: 1240px) {
+  .sponsors {
+    min-height: 600px; /* Use a fixed pixel height instead of vh to stop the zooming glitch */
+  }
+  
   .btn-mobile-nav {
     display: block;
     z-index: 9999;
@@ -280,6 +284,7 @@ body.no-scroll {
   background:
     url("sponsorbg.png") no-repeat center 60% / cover,
     #fff;
+  background-attachment: scroll; /* Change from 'fixed' to 'scroll' if you have it set to fixed */
 }
 
 .sponsors::before {
@@ -820,3 +825,4 @@ body.no-scroll {
 .footer-link:active {
   transform: translateY(-1.2rem);
 }
+
